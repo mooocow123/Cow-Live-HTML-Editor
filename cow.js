@@ -6,7 +6,6 @@ function showPreview(){
     frame.document.write(htmlCode.value);
     frame.document.close();
 }
-
 function savehtml() {
     localStorage.setItem("mySave", htmlCode.value);
 }
