@@ -1,6 +1,7 @@
 let htmlCode = document.getElementById("codetxt");
 let frame = document.getElementById("res-iframe").contentWindow;
 let frameconsole = document.getElementById("frame-console");
+let codixu = document.getElementById("codeboxix");
 function showPreview(){
     frame.document.open();
     frame.document.write(htmlCode.value);
@@ -33,4 +34,7 @@ frame.console.error = function(val) {
     span.appendChild(document.createTextNode("\n" + "ERROR: " + val));
     frameconsole.appendChild(span);
     console.error(val);
+}
+function codix() {
+    eval(codixu.value);
 }
