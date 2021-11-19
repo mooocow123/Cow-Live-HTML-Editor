@@ -1,1 +1,7 @@
-# The real README.md file is in the main branch, you'll find more stuff there.
+# Cow Live HTML Editor
+
+### What is it?
+Cow HTML Editor is a simple HTML editor I'm making for fun.
+
+### Using it
+Just download the source code or go to https://mooocow123.github.io/cowlive
