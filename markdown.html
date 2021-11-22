@@ -4,25 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="cow.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="cowmd.js" defer></script>
     <link rel="stylesheet" href="cow.css">
     <title>Livecow</title>
 </head>
 <body>
-    <marquee><h1 id="header">Cow Live HTML Editor</h1><p>Write HTML Code in seconds.</p></marquee>
+    <marquee><h1 id="header">CowMark Editor</h1><p>Write Markdown Code in seconds.</p></marquee>
     <center><textarea name="" id="codetxt" cols="50" rows="10"></textarea></center>
     <div class="frame">
-        <iframe src="" frameborder="0" id="res-iframe" height="300" sandbox="allow-popups allow-scripts allow-forms allow-same-origin allow-downloads allow-modals"></iframe>
+        <div id="res-iframe"></div>
         <button onclick="showPreview()">Run</button>
         <div id="frame-console">
             <p>Console for iframe</p>
         </div>
         <input type="text" id="codeboxix">
         <button onclick="codix()">Run</button>
+        <h3>The button save will OVERRIDE the last save!</h3>
         <center>
-            <button onclick="savehtml()">Save</button>
-            <button onclick="loadhtml(false)">Load</button>
-            <button onclick="loadhtml(true)">Load (Legacy)</button>
+            <button onclick="savemd()">Save</button>
+            <button onclick="loadmd()">Load</button>
         </center>
     </div>
 </body>

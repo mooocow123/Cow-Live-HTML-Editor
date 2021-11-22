@@ -1,5 +1,5 @@
 let htmlCode = document.getElementById("codetxt")
-let frame = document.getElementById("res-iframe").contentWindow
+let frame = document.getElementById("res-iframe")
 let frameconsole = document.getElementById("frame-console")
 let codixu = document.getElementById("codeboxix")
 class fakeconsole {
@@ -27,20 +27,13 @@ class fakeconsole {
 }
 frame.console = new fakeconsole()
 function showPreview(){
-    frame.document.open()
-    frame.document.write(htmlCode.value)
-    frame.document.close()
+    frame.innerHTML = marked.parse(codetxt.value)
 }
 function savehtml() {
-    localStorage.setItem("HTML-Save", htmlCode.value)
+    localStorage.setItem("MD-Save", htmlCode.value)
 }
-function loadhtml(legacy) {
-    if (legacy) {
-        htmlCode.value = localStorage.getItem("mySave")
-    }
-    else {
-        htmlCode.value = localStorage.getItem("HTML-Save")
-    }
+function loadhtml() {
+    htmlCode.value = localStorage.getItem("MD-Save")
     showPreview()
 }
 function codix() {
